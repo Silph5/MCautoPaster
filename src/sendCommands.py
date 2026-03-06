@@ -65,8 +65,8 @@ def main(args:argparse.Namespace):
     
     time.sleep(args.start_delay)
 
-    parser = AutoPaster(commands=commandList)
-    parser.runFullCommandList()
+    paster = AutoPaster(commands=commandList)
+    paster.runFullCommandList()
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
