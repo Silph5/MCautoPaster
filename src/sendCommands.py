@@ -28,9 +28,9 @@ class CommandFileProcessor:
         return commands
     
 class AutoPaster:
-    def __init__(self, commands):
+    def __init__(self, commands, interMenuDelay):
         self.commandList = commands
-        self.interMenuDelay = 0.5 #MC has an annoying delay on opening and closing the chat menu where you can't type or toggle the menu again
+        self.interMenuDelay = interMenuDelay
 
     def openCommandMenu(self):
         pyautogui.press("/")
@@ -53,7 +53,7 @@ class AutoPaster:
             self.copyCommand(command)
             self.openCommandMenu()
             self.paste()
-            self.runCommand()
+            self.runCommand()   
 
         
 
@@ -65,13 +65,14 @@ def main(args:argparse.Namespace):
     
     time.sleep(args.start_delay)
 
-    paster = AutoPaster(commands=commandList)
+    paster = AutoPaster(commands=commandList, interMenuDelay=args.interval/2)
     paster.runFullCommandList()
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-f", "--file-path", type=str, help="path to text file containing commands", required=True)
     parser.add_argument("-d", "--start-delay", type=float, help="delay before commands start to run, to give yourself enough time to tab into the minecraft window. Default is 3s", default=3)
+    parser.add_argument("-i", "--interval", type=float, help="time between commands. increase for laggy servers", default=0.5)
     args=parser.parse_args()
     main(args)
 
