@@ -6,7 +6,7 @@ This script reads the commands in a text file, and pastes and runs them one-by-o
 
 If you just want to know how to use the script, skip this section, it's not important.
 
-The specific problem i encountered that made me in need of this script was porting minecraft structure blocks onto a friend's minecraft world. Structure blocks are local to specific worlds, so this cannot be done without accessing the files of the world. In this situation, my friend played on console and either didn't have the means to or didn't understand how to access these files, meaning that i couldn't send a structure across, or install a datapack.
+The specific problem i encountered that made me in need of this script was porting minecraft structure blocks onto a friend's minecraft world. Structure blocks are local to specific worlds, so this cannot be done without accessing the files of the world. In this situation, my friend played on console and either didn't have the means to or didn't understand how to access these files, meaning that i couldn't send a structure across, or install a behavoir pack on their world.
 
 Instead, I found [a website](https://mcbe-essentials.github.io/structure-to-function/) that allowed me to convert structure block NBT data to a .mcfunction text file. The specific output of this website is what this script is designed around. What that actually means for the use of this script is detailed in How To Use, but a simple text file with nothing but ordinary commands separated by newlines will work fine, it just has a tiny bit of extra support for those files.
 
