@@ -18,7 +18,7 @@ If you do not have them already, install pyautogui and pyperclip using
 ```
 pip install pyautogui pyperclip
 ```
-I'm under the impression that these should work on Mac on Linux (i'm on windows).
+I'm under the impression that these should work on Mac and Linux (i'm on windows).
  
 Open a minecraft world and tab out to the command line. If you are on a server and tab out while in full screen mode, you may disconnect, so first switch to windowed mode through the ingame settings. 
 
