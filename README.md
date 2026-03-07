@@ -39,6 +39,8 @@ The script also takes two optional arguments:
 ```
 <sup><sub>(short: -d)</sub></sup>
 
+This is set to 3 seconds by default, giving you enough time to tab back into the minecraft window and do any other quick things.
+
 ```
 --interval [time_in_seconds]
 ```
